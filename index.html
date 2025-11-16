@@ -67,6 +67,7 @@
 
 
   <hr><h3 id="Abstract">Abstract</h3><hr>
+    <p id="Abstract_InText">
   <p class="ex1">
     Spacecraft propulsion systems are continuously under development to improve efficiency of fuel and to bring new 
     possibilities of deep space exploration. This paper discusses the differences between current propulsion systems 
@@ -76,7 +77,8 @@
 </p>
 
   <h3 id="Introduction">Introduction</h3>
-  <p class="ex1">
+  <p id="Introduction_InText">
+   <p class="ex1">
     Over time spacecraft propulsion systems have been looking towards greater fuel efficiency, lighter rockets and
     deeper space travel. A good example is the cryogenic engine which directly improves the efficiency of chemical
     propulsion by 30% (Vaidya, 2023) by keeping the fuel at low temperatures. An intriguing idea that is quite recent
@@ -132,7 +134,7 @@ Bridge deck repair durability is the subject of much recent research such as <a 
 <mi>0</mi>
 
 <h3 id="References">References</h3>
-
+  <pre id="References_InText">
 <pre>
   Angulin, D (1998), Queries and concept learning. Machine learning 2, (4), 319-342.
 
@@ -237,7 +239,7 @@ google.charts.setOnLoadCallback(drawChart);
       const username = 'FEPSFY6933817'
       const repo = 'FY6933817';
 
-      const url ='https://api.github.com/repos/$(username)/$(repo)/commits';
+      const url =`https://api.github.com/repos/$(username)/$(repo)/commits`;
 
       try {
         const response = await fetch(url, {
@@ -248,14 +250,14 @@ google.charts.setOnLoadCallback(drawChart);
         });
 
         if (!response.ok) {
-          throw new Error('Error fetching data: ${response.status} - ${response.statusText}');
+          throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
         }
         const commits = await response.json();
         if (commits && commits.length > 0) {
           const lastCommitDate = new Date(commits[0].commit.committer.date);
 
           //displaying the time on load
-          document.getElementById('last-updated').innerText = 'Last Modified Time: $(lastCommitDate.toLocaleString()}';
+          document.getElementById('last-updated').innerText = `Last Modified Time: $(lastCommitDate.toLocaleString()}`;
         } else {
           document.getElementById('last-updated').innerText = 'No commits found in the repository.';
         }
@@ -275,6 +277,45 @@ google.charts.setOnLoadCallback(drawChart);
     // Initial load to display the time on page load
     window.onload = getLastUpdatedTime;
     </script>
+
+  <!-- Placeholder for total word count -->
+  <p id="totalWordCount"></p>
+
+  <hr>
+
+  <script>
+    // Function to calculate and display word count for a specified section
+    function displayWordCount(sectionId, outputId) {
+      // Get the text content from the specified section
+      const text = document.getElementById(sectionId).textContent;
+
+      // Split text into words based on spaces and filter out any empty strings
+      const wordArray = text.trim().split(/\s+/);
+
+      // Count the words
+      const wordCount = wordArray.length;
+
+      // Return the word count for summing purposes
+      return wordCount;
+    }
+
+    // Funtion to calcualte and display total word count from selected sections
+    function displayTotalWordCount() {
+      // Calculate word count foe each section and accumulate the total
+      const AbstractCount = displayWordCount("Abstract_InText");
+      const IntroductionCount = displayWordCount("Introduction_InText");
+      const ReferencesCount = displayWordCount("References_InText");
+
+      // Calculate the sum of all the seleceted sections
+      const totalWordCount = AbstractCount + IntroductionCount + ReferencesCount;
+
+      //Display the total word count
+      document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+    }
+
+    // Run the function for specific sections and display total count when the page loads
+    window.onload = displayTotalWordCount;
+  </script>
   
  </body>
  </html>
