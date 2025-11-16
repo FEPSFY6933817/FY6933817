@@ -7,9 +7,9 @@
     <h1><b>ENG0018 Computer Laboratory 2025/26</b></h1>
   <h2>Student URN:6933817</h2>
   <hr>
-  <h2 style="font-family:calibri;"><b>Conference paper: Bridge Deck Repairs</b></h2>
+  <h2 style="font-family:calibri;"><b>Conference paper: Evolution of Spacecraft Propulsion Systems</b></h2>
   <hr>
-  <!style foe tables>
+  <!style for tables>
   <style>
     table {
       font-family: arial, sans-serif;
@@ -69,24 +69,24 @@
   <hr><h3 id="Abstract">Abstract</h3><hr>
     <p id="Abstract_InText">
   <p class="ex1">
-    Spacecraft propulsion systems are continuously under development to improve efficiency of fuel and to bring new 
-    possibilities of deep space exploration. This paper discusses the differences between current propulsion systems 
-    such as chemical and ion and how they have been developed to improve rocket mission efficiency. It also goes through
-    new propulsion ideas that are still in early stages of development and are being researched in order to bring new
-    possibilities to deep space travel therefore showing the future of spacecraft propulsion systems. 
+Spacecraft propulsion systems are continuously under development to improve efficiency of fuel and to bring new 
+possibilities of deep space exploration. This paper discusses the differences between current propulsion systems 
+such as chemical and ion and how they have been developed to improve rocket mission efficiency. It also goes through
+new propulsion ideas that are still in early stages of development and are being researched in order to bring new
+possibilities to deep space travel therefore showing the future of spacecraft propulsion systems. 
 </p>
 
   <h3 id="Introduction">Introduction</h3>
   <p id="Introduction_InText">
    <p class="ex1">
-    Over time spacecraft propulsion systems have been looking towards greater fuel efficiency, lighter rockets and
-    deeper space travel. A good example is the cryogenic engine which directly improves the efficiency of chemical
-    propulsion by 30% (Vaidya, 2023) by keeping the fuel at low temperatures. An intriguing idea that is quite recent
-    is the breakthrough Starshot project which would use light to propel micro or even nano scale spacecraft to the 
-    nearest star Proxima b in the Alpha Centuri system which is an exciting concept. Firstly, chemical and ion propulsion
-    is discussed along with a comparison of their efficiency and practical use in rockets and then other means of 
-    propulsion are considered such as nuclear thermal propulsion, the cryogenic engine and laser propulsion with the
-    possibilities they bring.
+Over time spacecraft propulsion systems have been looking towards greater fuel efficiency, lighter rockets and
+deeper space travel. A good example is the cryogenic engine which directly improves the efficiency of chemical
+propulsion by 30% (Vaidya, 2023) by keeping the fuel at low temperatures. An intriguing idea that is quite recent
+is the breakthrough Starshot project which would use light to propel micro or even nano scale spacecraft to the 
+nearest star Proxima b in the Alpha Centuri system which is an exciting concept. Firstly, chemical and ion propulsion
+is discussed along with a comparison of their efficiency and practical use in rockets and then other means of 
+propulsion are considered such as nuclear thermal propulsion, the cryogenic engine and laser propulsion with the
+possibilities they bring.
 </p>
 
      <h3 id="Analysis and discussion">Analysis and discussion</h3>
@@ -134,21 +134,27 @@ Bridge deck repair durability is the subject of much recent research such as <a 
 <mi>0</mi>
 
 <h3 id="References">References</h3>
-  <pre id="References_InText">
 <pre>
-  Angulin, D (1998), Queries and concept learning. Machine learning 2, (4), 319-342.
+Vaidya, A. (2023) ‘Ion And Chemical Propulsion - A Study’, Available at: 
+https://www.journalofyoungphysicists.org/post/ion-and-chemical-propulsion-a-study 
 
-  Brinker, K (2003), Incorperating Diversity in Active learning with Support Vector Machines,
-  Proceedings of the Twentieth International conference on Machine learning (ICML-2003).
+NASA. (2025) ‘Space Nulcear Propulsion Technical paper’, Available at: 
+https://www.nasa.gov/space-technology-mission-directorate/tdm/space-nuclear-propulsion/ 
 
-  Bruzzone, L, Chi, M and Marconcini, M (2006), A novel transductive SVM foe semisupervised classification of remote sensing images,
-  IEEE Transactions on Geoscience and Remote Sensing, 44, (11), 3363.
+National Academies of Sciences, Engineering, and Medicine. (2021) ‘Space Nuclear Propulsion for Human Mars Exploration’ p.13-14 
 
-  Bruzzone, L and Persello, C (2009), Active learning for classification of remote sensing images.
-  In: Geoscience and Remote Sensing Symposium, 2009 IEEE International, IGARSS 2009, 3.
+Buden, D. (1988) ‘Nuclear Rocket Safety’ Available at: 
+https://www.sciencedirect.com/science/article/abs/pii/0094576588901026 
 
-  Campbell, C, Cristianini, N and Smola, A (2000), Query learning with large margin classifiers.
-  In: Proc. 17th Internat. Conf.on Machine Learning. Morgan Kaufman, Stanford, CA,111-118.
+Kitsche, W. (2011) ‘Operation of a Cryogenic Rocket engine’ p.4 
+
+Sanjay, H. Kuzhiveli, Biju T. (2025) ‘Analysis of combined cycle Air Breathing-Cryogenic
+rocket engine for single stage to orbit vehicle’ p.1-6 
+
+Peretz, E. Mather, J C. Hamilton , C. Pabarcius, L. Hall, K. Fugate, R Q. Green, W A. Klupar, P. (2022)
+‘Orbiting laser configuration and sky coverage: coherent reference for Breakthrough Starshot ground-based laser array’ 
+Available at: https://www-spiedigitallibrary-org.surrey.idm.oclc.org/journals/Journal-of-Astronomical-Telescopes-Instruments
+-and-Systems/volume-8/issue-01/017004/Orbiting-laser-configuration-and-sky-coverage--coherent-reference-for/10.1117/1.JATIS.8.1.017004.full 
 </pre>
   
       <button id="colorButton">Click me to change colour</button>
@@ -304,10 +310,9 @@ google.charts.setOnLoadCallback(drawChart);
       // Calculate word count foe each section and accumulate the total
       const AbstractCount = displayWordCount("Abstract_InText");
       const IntroductionCount = displayWordCount("Introduction_InText");
-      const ReferencesCount = displayWordCount("References_InText");
 
       // Calculate the sum of all the seleceted sections
-      const totalWordCount = AbstractCount + IntroductionCount + ReferencesCount;
+      const totalWordCount = AbstractCount + IntroductionCount;
 
       //Display the total word count
       document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
