@@ -76,7 +76,7 @@ possibilities to deep space travel therefore showing the future of spacecraft pr
 </p>
 
   <h3 id="Introduction">Introduction</h3>
-  <p id="Introduction">
+  <p id="Introduction_InText">
    <p class="ex1">
 Over time spacecraft propulsion systems have been looking towards greater fuel efficiency, lighter rockets and
 deeper space travel. A good example is the cryogenic engine which directly improves the efficiency of chemical
@@ -296,9 +296,9 @@ google.charts.setOnLoadCallback(drawChart);
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction");
+    const IntroductionCount = displayWordCount("Introduction_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount;
+    const totalWordCount = IntroductionCount.length;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
