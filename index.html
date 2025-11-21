@@ -103,8 +103,10 @@ possibilities they bring.
     providing the thrust for propulsion (Vaidya, 2023). This method has a 90% fuel efficiency which is much better
     than chemical propulsion however the force produced is relatively low and is not enough yet to overcome earth’s
     gravity. (Vaidya, 2023) 
+  </p>
 
   <h4 id="Nuclear Thermal Propulsion">Nuclear Thermal propulsion</h4>
+    <p class="ex1" id="Nuclear_InText">
     Another type of propulsion development is nuclear thermal propulsion. This provides twice the propellant efficiency
     of chemical rockets (NASA 2025). This means that less fuel needs to be taken therefore decreasing size and mass of
     payload meaning more essential supplies can be brought along. It works by using nuclear fission and the heat generated
@@ -118,7 +120,8 @@ possibilities they bring.
     (875 seconds) which demonstrates a higher burning rate of the fuel meaning an increased performance of the engine. 
 
     National Academies of Sciences, Engineering, and Medicine. 2021. Space Nuclear Propulsion for Human Mars Exploration. Washington, DC: The National Academies Press.
-(2023).</a> TABLE 2.1 A Sampling of Data from Reactor and Engine Tests That Occurred in the Later Stages of the Rover/Nuclear Engine for Rocket Vehicle Applications (NERVA) Programs:
+(2023).TABLE 2.1 A Sampling of Data from Reactor and Engine Tests That Occurred in the Later Stages of the Rover/Nuclear Engine for Rocket Vehicle Applications (NERVA) Programs:
+    </p>
 <table>
   <p class="ex1">
   <tr>
@@ -172,6 +175,7 @@ possibilities they bring.
 </table>
 
  <h4 id="The Cryogenic Engine">The Cryogenic Engine</h4>
+  <p class="ex1" id="Cryogenic_InText">
   A key development of spacecraft propulsion efficiency is the introduction of the cryogenic engine. This engine works by
   storing fluids at low temperatures, so they are in liquid form, but are gaseous at room temperature (Kitsche 2011). This
   type of engine looks to be a promising for single stage to orbit flight according to a study and works with a combination
@@ -181,14 +185,17 @@ possibilities they bring.
   achieve a higher cost to weight ratio and also reduces space debris which is an environmental benefit (Mavapoyil and Kuzhiveli 2025).
   Compared to regular chemical propulsion this looks like a much more sustainable and efficient means of propulsion however
   it is still only in the development stage. 
+  </p>
 
 <h4 id="Laser Propulsion: The Breakthrough Starshot Project">Laser Propulsion: The Breakthrough Starshot Project</h4>
+    <p class="ex1" id="Starshot_InText">
   Deep space exploration sees many new possibilities due to these advancements because of increased fuel efficiency which
   results in less weight in fuel carried. Potential to visit neighbouring solar systems has also become investigated due to
   the breakthrough Starshot project. This project aims to send gram scale spacecraft to neighbouring solar systems by laser
   propulsion accelerating nano spacecraft to 20% of the speed of light (Peretz and more 2022). According to Abbas research
   is still ongoing to find an efficient propellant for space flight missions showing that this is still a very new development
   and that deep space exploration is still very limited for now (Abbas and more 2025).  
+    </p>
 
 <hr><h3 id="Conclusion">Conclusion</h3><hr>
     <p class="ex1" id="Conclusion_InText">
@@ -197,6 +204,7 @@ possibilities they bring.
   are to decrease fuel load to give space for other mission essentials. Finally, evolution of systems still has not brought us in
   to deep space exploration yet due to the ideas for it being in early development leaving things like travel to neighbouring
   stars only achievable in the future.
+    </p>
 
 <hr><h3 id="References">References</h3><hr>
 <pre>
@@ -289,8 +297,11 @@ Available at: https://www-spiedigitallibrary-org.surrey.idm.oclc.org/journals/Jo
     const IntroductionCount = displayWordCount("Introduction_InText");
     const AnalysisCount = displayWordCount("Analysis_InText");
     const ConclusionCount = displayWordCount("Conclusion_InText");
+    const NuclearCount = displayWordCount("Nuclear_InText");
+    const CryogenicCount = displayWordCount("Cryogenic_InText");
+    const StarshotCount = displayWordCount("Starshot_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount+AnalysisCount+ConclusionCount;
+    const totalWordCount = IntroductionCount+AnalysisCount+ConclusionCount+NuclearCount+CryogenicCount+StarshotCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
